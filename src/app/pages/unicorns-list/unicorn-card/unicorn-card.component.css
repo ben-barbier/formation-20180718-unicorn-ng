@@ -1,0 +1,13 @@
+:host {
+    margin: 9px;
+    display: block;
+    max-width: 200px;
+}
+
+mat-card-actions {
+    text-align: right;
+}
+
+button[mat-mini-fab] {
+    margin-left: 5px;
+}

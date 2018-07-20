@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{unicorn.name | magicalName}}</mat-card-title>
+        <mat-card-subtitle>{{unicorn.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="unicorn.photo">
+    <mat-card-content>
+        <div>{{unicorn.birthyear}}</div>
+        <div>{{unicorn.weight}}</div>
+        <div>{{unicorn.hobbies}}</div>
+        <div *ngIf="unicorn.capacitiesObjects.length">Capacités :
+            <ul>
+                <li *ngFor="let capacity of unicorn.capacitiesObjects">{{capacity.label}}</li>
+            </ul>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-mini-fab [routerLink]="['/unicorn', unicorn.id]"><mat-icon>visibility</mat-icon></button>
+        <button mat-mini-fab (click)="openDialog()"><mat-icon>edit</mat-icon></button>
+        <button mat-mini-fab (click)="delete()"><mat-icon>delete</mat-icon></button>
+        <button mat-mini-fab (click)="addOrRemoveFromCart()" [color]="(isInCart | async)?'primary':'accent'"><mat-icon>favorite</mat-icon></button>
+    </mat-card-actions>
+</mat-card>

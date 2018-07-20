@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Unicorn-ng</span>
+        <span><mat-icon routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['']">home</mat-icon></span>
+        <span><mat-icon routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['unicorns']">list</mat-icon></span>
+        <span><mat-icon routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['admin']">security</mat-icon></span>
+        <span class="spacer"></span>
+        <mat-icon [matBadge]="(cart | async).length" matBadgeColor="warn">favorite</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>

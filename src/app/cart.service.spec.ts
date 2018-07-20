@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { CartService } from './unicorns.service';
+import { CartService } from './cart.service';
 
 describe('CartService', () => {
   beforeEach(() => {

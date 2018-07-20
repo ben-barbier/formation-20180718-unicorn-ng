@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {from, Observable} from 'rxjs';
+import {map, pluck, reduce, tap} from 'rxjs/operators';
+import {UnicornsService} from './unicorns.service';
 
 @Component({
     selector: 'uni-root',
@@ -6,5 +9,11 @@ import {Component} from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'uni';
+
+    constructor(unicornsService: UnicornsService) {
+
+        // unicornsService.getMagicalUnicorns().subscribe();
+
+    }
+
 }
